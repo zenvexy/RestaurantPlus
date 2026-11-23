@@ -1,0 +1,11 @@
+{
+  "remoteName": "origin",
+  "projects": [
+    {
+      "id": "prj_RA9vDaPjz55NuIzMfxumLawIdbo4",
+      "name": "restaurantplus-backend",
+      "directory": "api",
+      "orgId": "team_tjtbrRE6w95BeXHHYEXpXchc"
+    }
+  ]
+}

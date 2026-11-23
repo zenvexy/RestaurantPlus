@@ -3,6 +3,10 @@
 Sistema de gerenciamento de restaurante. O repositório contém uma interface
 web simples e uma API REST em Express, com Prisma e PostgreSQL.
 
+## Complementar
+
+Este readme é um complemento ao readme do [Frontend](./web/README.md).
+
 ## Estrutura
 
 - `web/`: interface web.

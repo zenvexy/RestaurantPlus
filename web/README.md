@@ -1,6 +1,10 @@
-# RestaurantPlus - Frontend Web
+# RestaurantPlus - Frontend
 
 Interface moderna de gerenciamento para o sistema RestaurantPlus. Este frontend foi desenvolvido e estilizado com auxílio de Inteligência Artificial para proporcionar uma experiência visual aprimorada, fluida e intuitiva, conectando-se diretamente à API REST em produção na Vercel.
+
+## Complementar
+
+Este readme é um complemento ao readme do [Backend](../README.md).
 
 ## Visão Geral
 
@@ -57,11 +61,10 @@ Controle de pedidos em tempo real com alteração imediata de status (`PENDENTE`
 
 ## Estrutura da Pasta
 
-- `index.html`: Página principal da aplicação para deploy na Vercel.
-- `home.html`: Cópia funcional direta para execução e navegação local.
+- `home.html`: Interface principal da aplicação (SPA).
 - `style.css`: Estilização completa do layout, temas e componentes.
 - `script.js`: Toda a lógica de conexão com a API, manipulação de DOM, modais dinâmicos e reatividade.
-- `vercel.json`: Arquivo de configuração de roteamento estático para a Vercel.
+- `vercel.json`: Arquivo de configuração que direciona a rota raiz `/` da Vercel para `home.html`.
 
 ---
 

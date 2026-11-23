@@ -1,0 +1,76 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+// datasource db {
+//   provider = "mysql"
+// }
+
+datasource db {
+   provider = "postgresql"
+}
+
+model Pratos {
+  id           Int           @id @default(autoincrement())
+  nome         String
+  descricao    String
+  preco        Float
+  disponivel   Disponivel    @default(SIM)
+  categoriaId  Int
+  categoria    Categorias    @relation(fields: [categoriaId], references: [id])
+  ingredientes Ingredientes[]
+}
+
+model Ingredientes {
+  id         Int      @id @default(autoincrement())
+  nome       String
+  quantidade Int
+  pratos     Pratos[]
+}
+
+model Categorias {
+  id        Int       @id @default(autoincrement())
+  categoria Categoria @unique
+  pratos    Pratos[]
+}
+
+model Pedidos {
+  id       Int          @id @default(autoincrement())
+  cliente  String
+  total    Float
+  status   StatusPedido @default(PENDENTE)
+  mesaId   Int
+  mesa     Mesas        @relation(fields: [mesaId], references: [id])
+}
+
+model Mesas {
+  id         Int       @id @default(autoincrement())
+  numero     Int       @unique
+  capacidade Int
+  ocupada    Ocupada   @default(NAO)
+  pedidos    Pedidos[]
+}
+
+enum Disponivel {
+  SIM
+  NAO
+}
+
+enum Ocupada {
+  SIM
+  NAO
+}
+
+enum Categoria {
+  ENTRADA
+  PRATO_PRINCIPAL
+  SOBREMESA
+  BEBIDA
+}
+
+enum StatusPedido {
+  PENDENTE
+  PREPARANDO
+  CONCLUIDO
+  CANCELADO
+}

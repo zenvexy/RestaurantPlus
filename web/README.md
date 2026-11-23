@@ -61,10 +61,9 @@ Controle de pedidos em tempo real com alteração imediata de status (`PENDENTE`
 
 ## Estrutura da Pasta
 
-- `home.html`: Interface principal da aplicação (SPA).
+- `index.html`: Interface principal da aplicação (SPA).
 - `style.css`: Estilização completa do layout, temas e componentes.
 - `script.js`: Toda a lógica de conexão com a API, manipulação de DOM, modais dinâmicos e reatividade.
-- `vercel.json`: Arquivo de configuração que direciona a rota raiz `/` da Vercel para `home.html`.
 
 ---
 

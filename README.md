@@ -7,10 +7,6 @@ web simples e uma API REST em Express, com Prisma e PostgreSQL.
 
 Este readme é um complemento ao readme do [Frontend](./web/README.md).
 
-## URL
-
-A url pública da api fica em [restaurantplus-backend.vercel.app](https://restaurantplus-backend.vercel.app)
-
 ## Estrutura
 
 - `web/`: interface web.
